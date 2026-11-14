@@ -2,19 +2,23 @@
 # This is practice for the AP Exam
 
 import random
+import time
 
 def the_game(): # keeps the game in one place
-
+# Variables
+   
     levels=[ 1, 2,  3]
 levels=[ 1,  2,  3]
 
+choice_level = ""
+
 
 print("Welcome to the number guessing game!")
+time.sleep(2)
 
 print("There are 3 levels to this game")
 # INPUT 1 get the users level
-
-choice_level = ""
+time.sleep(2)
 
 running = True
 
@@ -29,8 +33,33 @@ while running:
         input("Please put in 1, 2, or 3:")
     if input is levels:
        print('Good choice! Lest start!')
-    
-    running = False 
 
+    print("👇")
+    running = False
+
+if choice_level == 1:
+   secret_number = random.randint(1, 10)
+while True:
+    user_guess =  int(input("Scince this is level one, you have to guess a number from 1 to 10:"))
+    if user_guess < secret_number:
+        print("The number is greater")
+    elif user_guess > secret_number:
+        print("The number is less")
+    elif user_guess == secret_number:
+        print("YOU GOT IT!")    
+        break
+
+    if choice_level == 2:
+        secret_number = random.randint(1, 50)
+    while True:
+        # ASK TEACHER ON INPUT ERROR
+        user_guess =  int(input("Now this is level 2. The number is form 1 to 50:"))
+        if user_guess < secret_number:
+            print("The number is greater")
+        elif user_guess > secret_number:
+            print("The number is less")
+        elif user_guess == secret_number:
+            print("YOU GOT IT!")    
+            break
     
 
