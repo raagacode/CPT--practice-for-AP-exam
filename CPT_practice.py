@@ -7,42 +7,40 @@ import time
 
 levels=[ 1,  2,  3]
 
-choice_level = ""
-
+choice_level = "" 
 
 def the_game(): # keeps the game in one place
     while running:
         print("Welcome to the number guessing game!")
-    time.sleep(2)
+        time.sleep(2)
    
-    print("There are 3 levels to this game")
+        print("There are 3 levels to this game")
    # INPUT 1 get the users level
-    time.sleep(2)
-running = True
+        time.sleep(2)
+    print("Welcome to the number guessing game!") 
+    time.sleep(1)
+    print("There are 3 levels to this game")
+    time.sleep(1)
+    running = True
 
-        if choice_level != "1" or choice_level != "2" or choice_level != "3":
-            choice_level = int(input("Choose your level with numbers 1; easy, 2; medium, 3; Hard: "))
+
+    if choice_level != "1" or choice_level != "2" or choice_level != "3":
+        choice_level = int(input("Choose your level with numbers 1; easy, 2; medium, 3; Hard: "))
    
-            if choice_level in levels:
-                print("Great choice! Lets get started")
-        else:
-           input("Please put in 1, 2, or 3:")
-        if input is levels:
-          print('Good choice! Lest start!') 
-   
-   
-   
-        print("👇")
-        running = False
-    
-    #return 
+    if choice_level in levels:
+        print("Great choice! Lets get started")
+    else:
+        input("Please put in 1, 2, or 3:")
+    if input == levels:
+        print('Good choice! Lest start!') 
+    print("👇")
+    running = False
+    return 
 
 
-
-
-    if choice_level == 1:
+if choice_level == 1:
         secret_number = random.randint(1, 10)
-    while True:
+while True:
         user_guess =  int(input("Since this is level one, you have to guess a number from 1 to 10:"))
         if user_guess < secret_number:
             print("The number is greater")
@@ -53,10 +51,10 @@ running = True
         break
 
 
-    if choice_level == 2:
+if choice_level == 2:
         secret_number1 = random.randint(1, 50)
 
-    while True:
+while True:
         user_guess2 = int(input("Choose a random number between 1 and 50:"))
 
         if user_guess2 < secret_number1:
