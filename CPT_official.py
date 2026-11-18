@@ -38,7 +38,7 @@ def the_game():
         secret_number = random.randint(1, 10)
 
         while True:
-            user_guess = int(input("Scince this is level one, you have to guess a number from 1 to 10:"))
+            user_guess = int(input("Scince this is level one, you will have to guess a number from 1 to 10:"))
 
             if user_guess < secret_number:
                 print("The number is greater")
@@ -75,9 +75,8 @@ def the_game():
                 elif user_guess > secret_number:
                     print("The number is less")
                 elif user_guess == secret_number:
-                    print("YOU GOT IT!")
+                    print("Congrats agent, you have solved the ")
                     break
-
 
 
 
