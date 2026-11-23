@@ -93,9 +93,9 @@ def the_game():
                 elif user_guess > secret_number:
                     print("The number is less")
                 elif user_guess == secret_number:
-                    print("Congrats agent, you have solved the ")
+                    print("Congrats agent, you have solved the case!")
                     break
 
 
-print_entrance_message()
+
 the_game()
