@@ -35,7 +35,7 @@ def the_game():
             choice_level = int(input("Choose a level with numbers 1; easy, 2; medium, 3; Hard: "))
         except ValueError:
             print("Error: Please enter a valid number, not text!")
-            continue
+            continue # this loops the code 
         if choice_level in levels:
              print("Great choice! Lets get started")
              running=False
