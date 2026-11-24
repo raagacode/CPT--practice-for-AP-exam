@@ -1,7 +1,4 @@
-# NUMBER GUESSING GAME
-# This is practice for the AP Exam
-# Purpose: an interactive which can entertain and test users loical and practical thinking skills
-#Design: My program sets 3 different level prompts for the user which also has a difficulty level which the user can choose. Based on their input, a random number will generate wihthin the range given for the user to figure out.
+
 
 import random
 import time
@@ -13,9 +10,8 @@ def print_entrance_message(level_parameter):
     
 
 def the_game():
-    # keeps the game in one place
 
-    # Variables
+    
     levels = [1, 2, 3]
     
     choice_level= 0
@@ -27,7 +23,6 @@ def the_game():
 
     print("There are 3 milestones to this game")
     time.sleep(2)
-    # INPUT 1 get the users level
 
     running= True
     while running:
@@ -98,4 +93,10 @@ def the_game():
 
 
 
-the_game()
+
+
+level = level_select()
+the_game(level)
+
+
+print_entrance_message(2)
